@@ -77,6 +77,16 @@ listOrders(){
         console.log(order.getOrderDetails());
     });
 }
+//task 5 implemented product restocking
+restockProduct(productId, quantity){
+    const product = this.products.find(prod => prod.id === productId);
+    if (product){
+        product.stock += quantity;
+        console.log(`Product ${product.name} restocked. New Stock: ${product.stock}`)
+    } else {
+        console.log("product not found");
+    }
+}
 
 
 }
@@ -86,6 +96,10 @@ listOrders(){
   const prod12 = new product("Laptop", 101, 1200, 10);
   inventory.addProduct(prod12);
   inventory.listProducts();
+
+  console.log(prod1.getDetails())
+
+  
 
   
   
