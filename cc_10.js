@@ -1,3 +1,5 @@
+
+//Task 1 Creating a product class 
 class product{
     constructor(name, id, price, stock){
         this.name = name;
@@ -17,4 +19,6 @@ const prod1 = new product("Laptop", 101, 1200, 10);
 console.log(prod1.getDetails());
 prod1.updateStock(3);
 console.log(prod1.getDetails()); 
+
+//Task 2
 
