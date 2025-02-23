@@ -46,6 +46,30 @@ console.log(order1.getOrderDetails());
 
 console.log(prod1.getDetails()); 
 
+//Task 3 created inventory class
+
+class Inventory {
+    constructor() {
+      this.products = []; 
+    }
+  
+    addProduct(product) {
+      this.products.push(product);
+    }
+  
+    listProducts() {
+      this.products.forEach(product => {
+        console.log(product.getDetails());
+      });
+    }
+  }
+  
+  
+  const inventory = new Inventory();
+  const prod12 = new product("Laptop", 101, 1200, 10);
+  inventory.addProduct(prod12);
+  inventory.listProducts();
+
   
   
   
